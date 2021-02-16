@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Hero } from '../hero';
 
@@ -7,7 +7,9 @@ import { Hero } from '../hero';
 })
 export class HeroService {
 
-  list: Hero[] = [
+
+
+  heroList: Hero[] = [
     {
       id: 1,
       name: "Superman",
@@ -60,10 +62,12 @@ export class HeroService {
   ];
 
 
-  constructor() { }
+  constructor() {
 
-  getAll() {
+  }
 
+  getAll(): Hero[] {
+    return this.heroList;
   }
 
 }

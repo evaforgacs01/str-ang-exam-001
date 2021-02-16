@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { Hero } from '../hero';
 import { HeroService } from '../service/hero.service';
 
@@ -11,23 +10,25 @@ import { HeroService } from '../service/hero.service';
 })
 export class HeroesComponent implements OnInit {
 
-  hero: Hero = new Hero;
+  @Input() hero: Hero = new Hero;
+  heroList = this.heroService.getAll();
 
 
-  superPowers: Array<string> = [
-    "magnetic",
-    "really smart",
-    "rich",
-    "hard",
-    "biking",
-    "Sticky",
-    "strong"
-  ];
+
+  // superPowers: Array<string> = [
+  //   "magnetic",
+  //   "really smart",
+  //   "rich",
+  //   "hard",
+  //   "biking",
+  //   "Sticky",
+  //   "strong"
+  // ];
 
 
   constructor(
-    private hService: HeroService,
-    private router: Router
+    private heroService: HeroService,
+
   ) { }
 
   ngOnInit(): void {
