@@ -14,18 +14,6 @@ export class HeroesComponent implements OnInit {
   heroList = this.heroService.getAll();
 
 
-
-  // superPowers: Array<string> = [
-  //   "magnetic",
-  //   "really smart",
-  //   "rich",
-  //   "hard",
-  //   "biking",
-  //   "Sticky",
-  //   "strong"
-  // ];
-
-
   constructor(
     private heroService: HeroService,
 

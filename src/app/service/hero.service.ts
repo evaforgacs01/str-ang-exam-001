@@ -20,7 +20,7 @@ export class HeroService {
     {
       id: 2,
       name: "Spiderman",
-      superpower: "Sticky",
+      superpower: "sticky",
       address: "LA"
 
     },
@@ -48,15 +48,36 @@ export class HeroService {
     {
       id: 6,
       name: "Magneto",
-      superpower: "really smart",
+      superpower: "magnetic",
       address: "Italy"
 
     },
     {
       id: 7,
       name: "Superbrain",
-      superpower: "magnetic",
+      superpower: "really smart",
       address: "UK"
+
+    },
+    {
+      id: 8,
+      name: "Bombastic",
+      superpower: "bombastic",
+      address: "UK"
+
+    },
+    {
+      id: 9,
+      name: "Superskinny",
+      superpower: "skinny",
+      address: "Alaska"
+
+    },
+    {
+      id: 10,
+      name: "Brainreader",
+      superpower: "brainreader",
+      address: "Australia"
 
     }
   ];
